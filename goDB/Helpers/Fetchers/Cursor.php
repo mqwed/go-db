@@ -297,7 +297,7 @@ class Cursor extends Base
     /**
      * {@inheritdoc}
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return $this->iassoc();
     }
@@ -305,7 +305,7 @@ class Cursor extends Base
     /**
      * {@inheritdoc}
      */
-    public function count()
+    public function count(): int
     {
         return $this->implementation->getNumRows($this->connection, $this->cursor);
     }

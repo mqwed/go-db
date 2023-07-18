@@ -42,6 +42,7 @@ final class Mysql extends Base
                 return false;
             }
         }
+        $connection->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE, 1);
         return $connection;
     }
 
